@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact card</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            height: 100vh;
+            width: 100vw;
+            /* object-fit: cover;
+            object-fit: ; */
+            background-image: url("https://images.unsplash.com/photo-1431794062232-2a99a5431c6c?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ");
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .card {
+            background-color: whitesmoke;
+
+            filter: opacity(.8);
+            height: 500px;
+            width: 400px;
+            box-shadow: 7px 13px 18px 0px dimgrey;
+
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            position: absolute;
+            display: grid;
+            grid-template-areas:
+                "photo photo photo"
+                "text  text  text"
+                "foot  foot  foot"
+                "foot  foot  foot";
+        }
+
+        .profile {
+            height: 200px;
+            width: 200px;
+            filter: opacity(1);
+            box-shadow: 2px 2px 2px blueviolet;
+            border-radius: 50%;
+            /* margin-left: auto;
+            margin-right: auto; */
+        }
+
+        .dp {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            left: 25%;
+            /* grid-area: photo; */
+            right: 25%;
+        }
+
+        h2 {
+            grid-area: text;
+            text-align: center;
+            /* margin-bottom:20px ; */
+            margin-top: 10px;
+            font-weight: 1000;
+            font-family: math;
+        }
+
+        .foot {
+            background-color: antiquewhite;
+            grid-area: foot;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+        }
+
+        ul {
+            display: flex;
+            gap: 40px;
+        }
+
+        ul li {
+            list-style: none;
+        }
+
+        li a img:hover {
+            scale: 1.1;
+            box-shadow: 1px 1px 1px rgb(10px, 10px,10px);
+            cursor: pointer;
+            border-radius: 5px;
+
+        }
+        
+        
+
+        @media screen and (max-width:1000px) {
+            .card {
+                background-color: cornsilk;
+                filter: opacity(.9);
+
+                height: 400px;
+                width: 300px;
+                box-shadow: 7px 13px 18px 0px dimgrey;
+
+
+            }
+
+            .profile {
+                height: 150px;
+                width: 150px;
+
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="card">
+
+            <div class="dp">
+                <img class="profile" src="git profile.jpg" alt="">
+            </div>
+
+            <h2>Contact us</h2>
+            <div class="foot">
+                <ul>
+                    <li><a href="https://www.finetoshine.com/wp-content/uploads/2020/07/Radhe-radhe-image-Hindu-God-Wallpaper-God-images.jpg"
+                            target="_blank"><img
+                                src="https://cdn.hugeicons.com/icons/call-incoming-02-stroke-rounded.svg"
+                                alt="call-incoming-02" width="30" height="30" /></a> </li>
+
+                    <li><a href="https://twitter.com/_Deepak_Negi" target="_blank"><img
+                                src="https://cdn.hugeicons.com/icons/new-twitter-rectangle-stroke-rounded.svg"
+                                alt="new-twitter-rectangle" width="30" height="30" /></a></li>
+
+                    <li>
+                        <a href="/file" target="_blank"><img
+                                src="https://cdn.hugeicons.com/icons/linkedin-01-stroke-rounded.svg" alt="linkedin-01"
+                                width="30" height="30" /></a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
